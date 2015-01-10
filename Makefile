@@ -1,7 +1,7 @@
 NAME=herokuish
 HARDWARE=$(shell uname -m)
-VERSION=0.1.0
-CEDARISH=v2
+VERSION=0.1.1
+CEDARISH=cedar14
 
 build:
 	echo "$(CEDARISH)" > include/cedarish.txt
@@ -31,6 +31,6 @@ release: build
 	rm -rf release && mkdir release
 	tar -zcf release/$(NAME)_$(VERSION)_linux_$(HARDWARE).tgz -C build/linux $(NAME)
 	tar -zcf release/$(NAME)_$(VERSION)_darwin_$(HARDWARE).tgz -C build/darwin $(NAME)
-	gh-release create gliderlabs/$(NAME) $(VERSION) $(shell git rev-parse --abbrev-ref HEAD)
+	gh-release create aledbf/$(NAME) $(VERSION) $(shell git rev-parse --abbrev-ref HEAD)
 
 .PHONY: build test test-functional test-apps release deps

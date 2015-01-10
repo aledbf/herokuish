@@ -1,6 +1,4 @@
 
-readonly slug_path="/tmp/slug.tgz"
-
 slug-import() {
 	declare desc="Import a gzipped slug tarball from URL or STDIN "
 	declare url="$1"
