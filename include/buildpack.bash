@@ -63,7 +63,7 @@ buildpack-setup() {
 buildpack-execute() {
 	if [[ -n "$BUILDPACK_URL" ]]; then
 		title "Fetching custom buildpack"
-		
+
 		selected_path="$buildpack_path/custom"
 		rm -rf "$selected_path"
 

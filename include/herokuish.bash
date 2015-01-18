@@ -13,6 +13,8 @@ readonly buildpack_path="${BUILDPACK_PATH:-/tmp/buildpacks}"
 
 readonly cedarish_version="$(asset-cat include/cedarish.txt)"
 
+readonly slug_path="${SLUG_PATH:-/tmp/slug.tgz}"
+
 declare unprivileged_user="nobody"
 declare unprivileged_group="nogroup"
 
