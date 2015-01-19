@@ -1,6 +1,6 @@
 NAME=herokuish
 HARDWARE=$(shell uname -m)
-VERSION=0.1.1
+VERSION=0.1.2
 CEDARISH=cedar14
 
 build:
